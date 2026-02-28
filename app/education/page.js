@@ -5,7 +5,7 @@ const educationData = [
   {
     degree: "B.Sc. in Software Engineering",
     institution: "Riphah International University",
-    year: "2023 – Present",
+    year: "2023 &ndash; Present",
     description:
       "Focused on data structures, system design, and modern web development. Alongside academic coursework, I actively build real-world frontend applications with an emphasis on performance, scalability, and user experience.",
     coursework: [
@@ -16,9 +16,9 @@ const educationData = [
     ]
   },
   {
-    degree: "ICS – Intermediate in Computer Science",
+    degree: "ICS &ndash; Intermediate in Computer Science",
     institution: "Punjab College",
-    year: "2021 – 2023",
+    year: "2021 &ndash; 2023",
     description:
       "Built a strong foundation in computer science, mathematics, and analytical thinking. Graduated with distinction.",
     coursework: [
