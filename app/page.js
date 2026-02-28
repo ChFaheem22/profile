@@ -42,7 +42,7 @@ const Home = () => {
 
       <section className="contact-cta">
         <div className="cta-content">
-          <h3>Let's build something amazing together.</h3>
+          <h3>Let&apos;s build something amazing together.</h3>
           <p>Interested in collaborating or discussing a project opportunity?</p>
           <Link className="btn white-btn" href="/contact">Let&apos;s Connect</Link>
         </div>
