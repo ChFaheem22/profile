@@ -1,22 +1,19 @@
 import './globals.css';
 import Navbar from './components/navbar';
-import ThemeProvider from './context/ThemeContext';
+import Logo from './components/logo';
 
 export const metadata = {
-  title: 'Faheem Blogs',
-  description: 'Blogs Website built with Next.js',
+  title: 'Faheem Portfolio',
+  description: 'Personal portfolio built with Next.js',
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
-        <ThemeProvider>
-          <Navbar />
-          <div className="fade-in">
-            {children}
-          </div>
-        </ThemeProvider>
+        <Navbar />
+        {children}
+        <Logo/>
       </body>
     </html>
   );

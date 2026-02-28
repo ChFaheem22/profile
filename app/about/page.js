@@ -1,65 +1,88 @@
 import Image from "next/image";
+import styles from "./About.module.css";
 
-export default function AboutPage() {
+const skillsData = [
+  { skill: "HTML/CSS", level: 90 },
+  { skill: "JavaScript ", level: 85 },
+  { skill: "React.js", level: 80 },
+  { skill: "Next.js", level: 75 },
+  { skill: "Git & GitHub", level: 85 },
+];
+
+const About = () => {
   return (
-    <div className="about-page">
-      <section className="intro-section">
-        <div className="intro-content">
-          <h1>About Faheem Blogs</h1>
-          <p>
-            Welcome to Faheem Blogs, a space where I share articles on topics I’m passionate about,
-            from tech insights to lifestyle tips and everything in between.
-          </p>
-        </div>
-      </section>
-
-      <section className="bio-details">
-        <div className="bio-image">
+    <section className={styles.aboutSection}>
+      <div className={styles.container}>
+        <div className={styles.profileBox}>
           <Image
-            src="/cropped.png"
-            alt="Faheem"
-            width={180}
-            height={180}
-            style={{
-              borderRadius: "50%",
-              objectFit: "cover",
-            }}
+            src="/pic-2.jpeg"
+            alt="Profile Image"
+            width={350}
+            height={450}
+            className={styles.profileImg}
           />
+          <a
+            href="/cv.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.downloadBtnDesktop}
+          >
+            Download Resume
+          </a>
         </div>
-        <div className="bio-text">
-          <h2>Hi, I&lsquo;m Faheem </h2>
+
+        <div className={styles.infoBox}>
+          <h1 className={styles.title}>About Me</h1>
           <p>
-            I’m a curious mind, tech enthusiast, and lifelong learner who loves writing and building
-            useful content. This blog started as a personal journal and has grown into a platform
-            to share knowledge, ideas, and personal growth stories.
+            I&rsquo;m Faheem, a <b>Frontend Developer</b> and Software
+            Engineering student with a strong focus on building modern,
+            responsive, and scalable web applications. I transform ideas into
+            clean, intuitive digital experiences.
           </p>
           <p>
-            When I&lsquo;m not blogging, you’ll find me exploring new technologies, reading, or experimenting
-            with side projects.
+            My primary expertise is in <b>React.js</b> and <b>Next.js</b>,
+            crafting reusable components, smooth interactions, and optimized
+            architectures.
           </p>
+          <p>
+            Alongside academics, I actively work on real-world projects to
+            improve problem-solving skills and <b>full-stack understanding</b>.
+            I am always keen to learn, innovate, and tackle challenging
+            opportunities.
+          </p>
+
+          <a
+            href="/cv.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.downloadBtn}
+          >
+            Download Resume
+          </a>
+
+          <div className={styles.skillsBox}>
+            <h2 className={styles.skillsTitle}>My Skills</h2>
+            <div className={styles.skillsGrid}>
+              {skillsData.map((item, index) => (
+                <div key={index} className={styles.skillCard}>
+                  <div className={styles.skillLabel}>
+                    <span className={styles.skillName}>{item.skill}</span>
+                    <span>{item.level}%</span>
+                  </div>
+                  <div className={styles.skillBar}>
+                    <div
+                      className={styles.skillFill}
+                      style={{ "--skill-width": "90%" }}
+                    ></div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
-      </section>
-
-      <section className="blog-purpose">
-        <h2>What You&lsquo;ll Find Here</h2>
-        <ul>
-          <li> Thoughtful blog posts and tutorials</li>
-          <li> Tech and coding tips</li>
-          <li> Productivity and mindset content</li>
-        </ul>
-      </section>
-
-      <section className="connected">
-        <h3>Let’s Stay Connected</h3>
-        <p>
-          Have questions or want to collaborate? Head over to 
-          the <a href="/contact" className="contact-link"><strong>Contact page</strong></a> and drop a message.
-        </p>
-        <p style={{ marginTop: "1rem" }}>
-          Or feel free to email directly at:{" "}
-          <a href="mailto:faheem@example.com" className="email-link"><strong>faheem779@gmail.com</strong></a>
-        </p>
-      </section>
-    </div>
+      </div>
+    </section>
   );
-}
+};
+
+export default About;

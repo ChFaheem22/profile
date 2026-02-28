@@ -1,0 +1,238 @@
+.aboutSection {
+  padding: 4rem 2rem;
+background: linear-gradient(
+    120deg,
+    #e0e7ff 0%,
+    #f8fafc 50%,
+    #f8fafc 80%
+  ); 
+   font-family: "Poppins", sans-serif;
+}
+
+.container {
+  display: flex;
+  gap: 3rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/* Profile Image */
+.profileBox {
+  flex: 1 1 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.profileImg {
+    margin-top: 2rem;
+  border-radius: 20px;
+  object-fit: cover;
+  height: 100%;
+  max-height: 500px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.profileImg:hover {
+  transform: scale(1.05);
+}
+
+/* Info Box */
+.infoBox {
+  flex: 2 1 450px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.title {
+  font-size: 2.8rem;
+  color: #2c3e50;
+  margin-bottom: 1rem;
+}
+
+.infoBox p {
+  font-size: 1.1rem;
+  text-align: justify;
+  line-height: 1.7;
+  color: #444;
+}
+
+.downloadBtn {
+  display: inline-block;
+  margin: 1.5rem 0 0 0;
+  background: linear-gradient(135deg, #6366f1, #9950e2);
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 5px 15px rgba(99,102,241,0.3);
+  transition: all 0.3s ease;
+  width: auto; 
+  opacity: 0;
+}
+
+.downloadBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(99,102,241,0.5);
+}
+
+.downloadBtnDesktop {
+  display: inline-block;
+  margin: 1.5rem 0 0 0; 
+  background: linear-gradient(135deg, #6366f1, #9950e2);
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 5px 15px rgba(99,102,241,0.3);
+  transition: all 0.3s ease;
+  width: auto; 
+}
+
+.downloadBtnDesktop:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(99,102,241,0.5);
+}
+
+/* Skills Section */
+.skillsBox {
+  margin-top: 2rem;
+}
+
+.skillsTitle {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #2c3e50;
+}
+
+.skillsGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.skillCard {
+  background: white;
+  padding: 1rem 1.2rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.skillCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
+}
+
+.skillLabel {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 0.3rem;
+}
+
+.skillBar {
+  height: 14px;
+  background: #e0e0e0;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.skillFill {
+  height: 100%;
+  width: 0; /* start at 0 */
+  border-radius: 8px;
+  background: linear-gradient(90deg, #6366f1, #9950e2);
+  position: relative;
+  overflow: hidden;
+  animation: fillSkill 2s forwards;
+}
+
+/* Shimmer inside the actual width */
+.skillFill::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -50%;
+  width: 50%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.2);
+  transform: skewX(-20deg);
+  animation: shimmer 2s linear infinite;
+}
+
+@keyframes fillSkill {
+  from { width: 0; }
+  to { width: var(--skill-width); } /* e.g., 90%, 75% */
+}
+
+@keyframes shimmer {
+  0% { left: -50%; }
+  100% { left: 100%; }
+}
+
+
+.skillName {
+  margin-right: 0.6rem;
+}
+
+/* ----------------- MOBILE RESPONSIVE ----------------- */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .profileBox {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+  }
+
+  .profileImg {
+    width: 70%;
+    max-width: 350px;
+    height: auto;
+  }
+
+  .infoBox {
+    width: 100%;
+    align-items: center;
+    text-align: center;
+  }
+
+  .skillsGrid {
+    grid-template-columns: 1fr;
+    width: 100%;
+  }
+
+  .skillLabel {
+    padding: 1rem;
+  }
+
+  .title {
+    font-size: 2.4rem;
+  }
+
+  .skillsTitle {
+    font-size: 1.6rem;
+  }
+
+  .downloadBtn {
+    padding: 0.7rem 1.4rem;
+    opacity: 1;
+  }
+  .downloadBtnDesktop {
+    opacity: 0;
+  }
+}

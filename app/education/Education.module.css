@@ -1,0 +1,253 @@
+/* app/education/Education.module.css */
+
+.educationSection {
+  padding: 60px 20px;
+  background: linear-gradient(
+    135deg,
+    #f8fafc 0%,
+    #eef2ff 50%,
+    #fdf2f8 100%
+  );
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.title {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 40px;
+  color: #1f2937;
+  position: relative;
+}
+
+.cardGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.card {
+  background: #fff;
+  border-radius: 14px;
+  padding: 28px 32px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.03);
+  transition: all 0.3s ease;
+}
+
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+}
+
+.header {
+  margin-bottom: 15px;
+}
+
+.degree {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: #111827;
+}
+
+.institution {
+  font-size: 1rem;
+  color: #4b5563;
+}
+
+.year {
+  font-size: 0.95rem;
+  color: #6b7280;
+  font-style: italic;
+}
+
+.description {
+  margin: 12px 0;
+  font-size: 1rem;
+  color: #374151;
+}
+
+.gpa {
+  font-size: 0.95rem;
+  color: #111;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.coursework {
+  font-size: 0.95rem;
+  color: #374151;
+}
+
+.coursework ul {
+  margin-top: 6px;
+  padding-left: 20px;
+  list-style: disc;
+}
+
+.coursework li {
+  margin-bottom: 4px;
+}
+
+/* Responsive */
+@media (min-width: 768px) {
+  .cardGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+
+/* ================================
+   CERTIFICATIONS - UNIQUE DESIGN
+================================ */
+
+.certTitle {
+  margin-top: 5rem;
+  font-size: 2.5rem;
+  text-align: center;
+  font-weight: 700;
+  background: linear-gradient(90deg, #4a90e2, #7b61ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Wrapper */
+.certGrid {
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  position: relative;
+  padding-left: 2rem;
+}
+
+/* Vertical line */
+.certGrid::before {
+  content: "";
+  position: absolute;
+  left: 8px;
+  top: 0;
+  width: 3px;
+  height: 100%;
+  background: linear-gradient(to bottom, #4a90e2, #7b61ff);
+  border-radius: 10px;
+}
+
+/* Certificate Card */
+.certCard {
+  position: relative;
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 18px;
+  border: 1px solid #f0f0f0;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s ease;
+}
+
+/* Timeline dot */
+.certCard::before {
+  content: "";
+  position: absolute;
+  left: -2.2rem;
+  top: 2rem;
+  width: 16px;
+  height: 16px;
+  background: #7b61ff;
+  border-radius: 50%;
+  border: 4px solid #ffffff;
+  box-shadow: 0 0 0 3px #e0e7ff;
+}
+
+/* Hover effect */
+.certCard:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.1);
+}
+
+/* Title */
+.certName {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 0.3rem;
+}
+
+/* Provider badge */
+.certProvider {
+  display: inline-block;
+  background: #eef2ff;
+  color: #4a90e2;
+  font-size: 0.85rem;
+  font-weight: 500;
+  padding: 6px 14px;
+  border-radius: 50px;
+  margin-bottom: 0.5rem;
+}
+
+/* Year */
+.certYear {
+  font-size: 0.85rem;
+  color: #777;
+  margin-bottom: 1rem;
+}
+
+/* Description */
+.certDesc {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: #444;
+}
+
+/* ================================
+   RESPONSIVE DESIGN
+================================ */
+
+@media (max-width: 768px) {
+
+  .certGrid {
+    padding-left: 1rem;
+  }
+
+  .certGrid::before {
+    left: 4px;
+  }
+
+  .certCard {
+    padding: 1.5rem;
+  }
+
+  .certCard::before {
+    left: -1.7rem;
+  }
+
+  .certTitle {
+    font-size: 2rem;
+  }
+
+  .certName {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .certGrid::before {
+    display: none;
+  }
+
+  .certCard::before {
+    display: none;
+  }
+
+  .certCard {
+    padding: 1.2rem;
+  }
+
+  .certTitle {
+    font-size: 1.8rem;
+  }
+}

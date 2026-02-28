@@ -1,43 +1,54 @@
-import Link from "next/link";
-import Image from "next/image";
-import blogPosts from "./data/post";
+import Link from 'next/link'
+import Image from 'next/image';
 
-export default function HomePage() {
-
+const Home = () => {
   return (
-    <div className="homepage">
-      <section className="bio-section">
-        <div className="bio-content">
-          <h1>Welcome to Faheem Blogs</h1>
-          <p>Read articles, learn something new, and stay updated.</p>
+    <main className="home-container">
+      
+      {/* Background Decor Elements */}
+      <div className="blob blob-1"></div>
+      <div className="blob blob-2"></div>
+
+      <section className="hero">
+        <div className="hero-content">
+          <span className="badge">👋 Welcome to my portfolio</span>
+          <h1>Hi, I’m <span className="name">Faheem</span></h1>
+          <h2>Frontend Developer & <br /> MERN Stack Enthusiast</h2>
+          <p className="intro">
+            I’m a Software Engineering student focused on building fast,
+            scalable, and user-centered web applications. I specialize in
+            <strong> React</strong> and <strong>Next.js</strong>, crafting clean UI designs with smooth user experiences.
+          </p>
+          
+          <div className="buttons">
+            <Link className="btn primary" href="/projects">View My Work</Link>
+            <Link className="btn outline" href="/about">About Me</Link>
+          </div>
+        </div>
+
+        <div className="hero-image-wrapper">
+          <div className="image-container">
+            <Image 
+              src="/pic-3.jpeg" 
+              alt="Faheem - Frontend Developer" 
+              className="profile-img" 
+              width={400} 
+              height={500}
+              priority
+            />
+          </div>
         </div>
       </section>
 
-      
-      <div className="grid">
-        {blogPosts.map((post) => (
-          <Link key={post.slug} href={`/blogs/${post.slug}`} className="card">
-            <div>
-              <Image
-                src={post.image}
-                alt={post.title}
-                width={300}
-                height={200}
-                className="thumbnail"
-                style={{
-                  width: "100%",
-                  height: "200px",
-                  objectFit: "cover",
-                  borderRadius: "6px",
-                }}
-              />
-
-              <h3>{post.title}</h3> 
-              <p>{post.summary}</p>
-            </div>
-          </Link>
-        ))}
-      </div>
-    </div>
+      <section className="contact-cta">
+        <div className="cta-content">
+          <h3>Let's build something amazing together.</h3>
+          <p>Interested in collaborating or discussing a project opportunity?</p>
+          <Link className="btn white-btn" href="/contact">Let’s Connect</Link>
+        </div>
+      </section>
+    </main>
   );
-}
+};
+
+export default Home;

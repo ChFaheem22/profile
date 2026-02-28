@@ -1,69 +1,52 @@
-"use client";
-import { useState } from "react";
+import React from "react";
+import styles from "./Contacts.module.css";
 
-export default function ContactPage() {
-  const [form, setForm] = useState({ name: "", email: "", message: "" });
-  const [submitted, setSubmitted] = useState(false);
-
-  const handleChange = (e) => {
-    setForm({ ...form, [e.target.name]: e.target.value });
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-
-    console.log("Form submitted:", form);
-
-    setSubmitted(true);
-    setForm({ name: "", email: "", message: "" });
-  };
-
+const Contacts = () => {
   return (
-    <div className="contact-container">
-      <h1>Contact Us</h1>
-      {submitted ? (
-        <p className="success-message">Thank you! Your message was sent.</p>
-      ) : (
-        <form onSubmit={handleSubmit} className="contact-form">
-          <div>
-            <label htmlFor="name">Name</label>
-            <input
-              type="text"
-              id="name"
-              name="name"
-              value={form.name}
-              onChange={handleChange}
-              required
-            />
-          </div>
+    <section className={styles.contactSection}>
+      <div className={styles.contactContainer}>
+        <h1 className={styles.contactTitle}>Let&rsquo;s Connect</h1>
+        <p className={styles.contactSubtitle}>
+          I&rsquo;m always open to discussing new opportunities, collaborations, or ideas.
+        </p>
 
-          <div>
-            <label htmlFor="email">Email</label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              value={form.email}
-              onChange={handleChange}
-              required
-            />
-          </div>
+        <div className={styles.contactGrid}>
 
-          <div>
-            <label htmlFor="message">Message</label>
-            <textarea
-              id="message"
-              name="message"
-              value={form.message}
-              onChange={handleChange}
-              required
-              rows={5}
-            />
-          </div>
+          <a
+            href="mailto:faheemchh779@gmail.com"
+            className={styles.contactCard}
+          >
+            <div className={styles.icon}>📧</div>
+            <h3>Email</h3>
+            <p>faheemchh779@gmail.com</p>
+          </a>
 
-          <button type="submit">Send Message</button>
-        </form>
-      )}
-    </div>
+          <a
+            href="https://www.linkedin.com/in/faheem-95772830b"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.contactCard}
+          >
+            <div className={styles.icon}>💼</div>
+            <h3>LinkedIn</h3>
+            <p>Connect professionally</p>
+          </a>
+
+          <a
+            href="https://github.com/ChFaheem22"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.contactCard}
+          >
+            <div className={styles.icon}>💻</div>
+            <h3>GitHub</h3>
+            <p>Explore my repositories</p>
+          </a>
+
+        </div>
+      </div>
+    </section>
   );
-}
+};
+
+export default Contacts;
