@@ -33,7 +33,7 @@ const Project = () => {
           target="_blank"
           className="link"
         >
-          https://blog-three-dun-55.vercel.app/
+          https://blog-phi-blush-60.vercel.app/
         </a>
       ),
     },
