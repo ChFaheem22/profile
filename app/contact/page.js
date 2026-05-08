@@ -22,7 +22,7 @@ const Contacts = () => {
           </a>
 
           <a
-            href="https://www.linkedin.com/in/faheem-95772830b"
+            href="https://www.linkedin.com/in/faheemch22"
             target="_blank"
             rel="noopener noreferrer"
             className={styles.contactCard}
