@@ -40,7 +40,7 @@ const Contacts = () => {
           >
             <div className={styles.icon}>💻</div>
             <h3>GitHub</h3>
-            <p>Explore my repositories</p>
+            <p>Explore my Repositories</p>
           </a>
 
         </div>
