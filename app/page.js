@@ -29,7 +29,7 @@ const Home = () => {
         <div className="hero-image-wrapper">
           <div className="image-container">
             <Image 
-              src="/pic-3.jpeg" 
+              src="/pic-4.jpeg" 
               alt="Faheem - Frontend Developer" 
               className="profile-img" 
               width={400} 
