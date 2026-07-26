@@ -1,73 +1,129 @@
+import Link from 'next/link';
+import { ExternalLink, FileSearch } from 'lucide-react';
+import { FaGithub } from 'react-icons/fa';
+import { projects } from './data';
+import Reveal from '../components/reveal';
+
+export const metadata = {
+  title: 'Projects',
+  description:
+    'Web, mobile and AI-assisted projects — MERN, Next.js, Flutter and Python.',
+};
+
 const Project = () => {
-  const project = [
-    {
-      name: "Car Rental System",
-      description:
-        "Developed a complete database-driven system to manage vehicle rentals, customer records, and booking operations. Designed the ERD and relational schema using MySQL, and explored a NoSQL alternative with MongoDB for flexible data handling. Streamlined workflows for tracking availability, scheduling, and returns.",
-      tools: ["MySQL", "MongoDB"],
-      link: "N/A",
-    },
-    {
-      name: "Online Service Provider",
-      description:
-        "Built a full-stack web application that connects users with local service providers. Key features include user authentication, service listings, real-time booking, and role-based dashboards for customers and providers. Designed a scalable backend and implemented responsive frontend interfaces for seamless interaction.",
-      tools: ["MongoDB", "Express.js", "React.js", "Node.js"],
-      link: (
-        <a
-          href="https://frontend-woad-beta-94.vercel.app/"
-          target="_blank"
-          className="link"
-        >
-          https://frontend-woad-beta-94.vercel.app/
-        </a>
-      ),
-    },
-    {
-      name: "Blog Web Application",
-      description:
-        "Developed a modern blog web application using React and Next.js, focused on clean design, responsive layouts, and optimized performance. Designed the interface with accessibility and smooth navigation in mind, ensuring consistency across devices.",
-      tools: ["HTML", "CSS", "React.js", "Next.js"],
-      link: (
-        <a
-          href="https://blog-phi-blush-60.vercel.app/"
-          target="_blank"
-          className="link"
-        >
-          https://blog-phi-blush-60.vercel.app/
-        </a>
-      ),
-    },
-    {
-      name: "DriveGo – Car Rental Platform",
-      description:
-        "A full-featured mobile car rental ecosystem built with Flutter. DriveGo solves the friction of traditional rental services by offering real-time vehicle availability, seamless booking flows, and secure identity verification.",
-      tools: ["Flutter", "Dart", "Firebase Authentication", "Cloudinary"],
-      link: (
-        <a
-          href="https://github.com/ChFaheem22/flutter.git"
-          target="_blank"
-          className="link"
-        >
-          GitHub Repository
-        </a>
-      ),
-    },
-  ];
   return (
-    <div className="projects">
-      <h1 className="heading">My Projects</h1>
-      <div className="project-grid">
-        {project.map((project, index) => (
-          <div key={index} className="project-card">
-            <h2>{project.name}</h2>
-            <p>{project.description}</p>
-            <p>
-              <strong>Tools:</strong> {project.tools.join(", ")}
-            </p>
-            <p>
-              <strong>Link:</strong> {project.link}
-            </p>
-          </div>
+    <div className="wrap">
+      <Reveal>
+        <span className="eyebrow">SELECTED WORK</span>
+        <h1 className="heading">Projects</h1>
+        <p className="sub">
+          A mix of web, mobile and AI-assisted tools — spanning MERN, Next.js,
+          Flutter and Python.
+        </p>
+      </Reveal>
+
+      <div className="grid">
+        {projects.map((project, i) => (
+          <Reveal key={project.slug} delay={i * 0.05}>
+            <div className="card">
+              <div
+                className="cover"
+                style={{ background: project.grad }}
+              >
+                <span className="coverName">{project.name}</span>
+
+                <div className="coverOverlay">
+                  {project.demo && (
+                    <a
+                      href={project.demo}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="coverBtn"
+                      aria-label="Live demo"
+                    >
+                      <ExternalLink size={17} />
+                    </a>
+                  )}
+
+                  {project.github && (
+                    <a
+                      href={project.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="coverBtn"
+                      aria-label="GitHub repository"
+                    >
+                      <FaGithub size={17} />
+                    </a>
+                  )}
+
+                  {project.hasCaseStudy && (
+                    <Link
+                      href={`/projects/${project.slug}`}
+                      className="coverBtn"
+                      aria-label="Read case study"
+                    >
+                      <FileSearch size={17} />
+                    </Link>
+                  )}
+                </div>
+              </div>
+
+              <div className="body">
+                <p className="tagline">{project.tagline}</p>
+                <p className="desc">{project.description}</p>
+
+                <div className="tags">
+                  {project.tools.map((tool) => (
+                    <span className="tag" key={tool}>
+                      {tool}
+                    </span>
+                  ))}
+                </div>
+
+                <div className="cardLinks">
+                  {project.demo && (
+                    <a
+                      href={project.demo}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="link"
+                    >
+                      <ExternalLink size={14} />
+                      {' '}Live Demo
+                    </a>
+                  )}
+
+                  {project.github && (
+                    <a
+                      href={project.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="link"
+                    >
+                      <FaGithub size={14} />
+                      {' '}GitHub
+                    </a>
+                  )}
+
+                  {project.hasCaseStudy ? (
+                    <Link
+                      href={`/projects/${project.slug}`}
+                      className="link"
+                    >
+                      <FileSearch size={14} />
+                      {' '}Case Study
+                    </Link>
+                  ) : (
+                    <span className="link disabled">
+                      <FileSearch size={14} />
+                      {' '}Case study coming soon
+                    </span>
+                  )}
+                </div>
+              </div>
+            </div>
+          </Reveal>
         ))}
       </div>
     </div>
