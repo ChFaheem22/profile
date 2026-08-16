@@ -87,7 +87,7 @@ export default function RootLayout({ children }) {
       suppressHydrationWarning
     >
       <head>
-        {/* Set theme before paint to avoid a light/dark flash */}
+        <meta name="google-site-verification" content="8PLv-A6bbN2dLsDtDJJRp9wQgRRPO98b5RhH_SSFrI0" />
         <script
           dangerouslySetInnerHTML={{
             __html: `(function(){try{var t=localStorage.getItem('theme')||(matchMedia('(prefers-color-scheme: light)').matches?'light':'dark');document.documentElement.setAttribute('data-theme',t);}catch(e){}})();`,
