@@ -17,7 +17,7 @@ const Project = () => {
         <span className="eyebrow">SELECTED WORK</span>
         <h1 className="heading">Projects</h1>
         <p className="sub">
-          A mix of web, mobile and AI-assisted tools — spanning MERN, Next.js,
+          A mix of web, mobile and AI-assisted tools - spanning MERN, Next.js,
           Flutter and Python.
         </p>
       </Reveal>

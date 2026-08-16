@@ -4,22 +4,63 @@ import Reveal from '../components/reveal';
 
 export const metadata = {
   title: 'About',
-  description: 'Frontend developer and Software Engineering student — background, journey and skills.',
+  description:
+    'Frontend Developer & Software Engineering student passionate about building modern, scalable, and high-performance digital experiences.',
 };
 
 const timeline = [
-  { year: '2023', title: 'Started Web Development', desc: 'First steps into HTML, CSS and JavaScript.' },
-  { year: '2023 – 2024', title: 'React', desc: 'Learned component-based UI development and modern React patterns.' },
-  { year: '2024', title: 'MERN Stack', desc: 'Extended into full-stack development — MongoDB, Express, React, Node.' },
-  { year: '2024 – 2025', title: 'Flutter', desc: 'Picked up cross-platform mobile development with Flutter & Firebase.' },
-  { year: '2025', title: 'Frontend Developer Internship', desc: 'Humanity Alliance Organization — production React interfaces.' },
-  { year: 'Now', title: 'Frontend Developer', desc: 'Building fast, scalable web & mobile apps, and studying Software Engineering.' },
+  {
+    year: '2023',
+    title: 'Started My Development Journey',
+    desc: 'Discovered web development and built my first responsive websites using HTML, CSS, and JavaScript.',
+  },
+  {
+    year: '2023 – 2024',
+    title: 'Modern Frontend Development',
+    desc: 'Focused on React, component-driven architecture, state management, and creating engaging user interfaces.',
+  },
+  {
+    year: '2024',
+    title: 'Full-Stack Development',
+    desc: 'Expanded into the MERN stack, building complete web applications with APIs, authentication, and databases.',
+  },
+  {
+    year: '2024 – 2025',
+    title: 'Cross-Platform Apps',
+    desc: 'Started developing mobile applications with Flutter and Firebase while exploring scalable app architecture.',
+  },
+  {
+    year: '2025',
+    title: 'Frontend Developer Internship',
+    desc: 'Contributed to production-ready React applications, collaborated with teams, and transformed designs into polished user experiences.',
+  },
+  {
+    year: 'Today',
+    title: 'Building & Growing',
+    desc: 'Continuously creating modern digital products while expanding my full-stack expertise and pursuing Software Engineering.',
+  },
 ];
 
 const skillCategories = [
-  { title: 'Frontend', skills: ['React', 'Next.js', 'JavaScript', 'HTML / CSS'] },
-  { title: 'Mobile & Backend', skills: ['Flutter', 'Dart', 'Node.js', 'Express.js', 'MongoDB', 'Firebase'] },
-  { title: 'Tools', skills: ['Git & GitHub', 'Python', 'VS Code', 'Figma'] },
+  {
+    title: 'Frontend Engineering',
+    skills: ['React.js', 'Next.js', 'JavaScript', 'HTML5', 'CSS3'],
+  },
+  {
+    title: 'Backend & Mobile',
+    skills: [
+      'Flutter',
+      'Dart',
+      'Node.js',
+      'Express.js',
+      'MongoDB',
+      'Firebase',
+    ],
+  },
+  {
+    title: 'Development Tools',
+    skills: ['Git', 'GitHub', 'Python', 'VS Code', 'Figma'],
+  },
 ];
 
 const About = () => {
@@ -30,12 +71,13 @@ const About = () => {
           <div className={styles.imgFrame}>
             <Image
               src="/pic-2.jpeg"
-              alt="Profile Image"
+              alt="Faheem - Frontend Developer"
               width={350}
               height={450}
               className={styles.profileImg}
             />
           </div>
+
           <a
             href="/cv.pdf"
             target="_blank"
@@ -48,26 +90,37 @@ const About = () => {
 
         <div className={styles.infoBox}>
           <span className="eyebrow">ABOUT ME</span>
+
           <h1 className={styles.title}>
-            Building clean, <span className="gradText">scalable</span> web &amp; mobile apps
+            Building
+            <span className="gradText"> digital experiences </span>
+            that are
+            <span className="gradText"> fast</span>,
+            <span className="gradText"> scalable</span>, and
+            <span className="gradText"> unforgettable</span>.
           </h1>
+
           <p>
-            I&rsquo;m Faheem, a <b>Frontend Developer</b> and Software
-            Engineering student with a strong focus on building modern,
-            responsive, and scalable web applications. I transform ideas
-            into clean, intuitive digital experiences.
+            I&rsquo;m <b>Faheem</b>, a <b>Frontend Developer</b> and Software
+            Engineering student passionate about turning ambitious ideas into
+            modern, responsive, and high-performance web applications that
+            people genuinely enjoy using.
           </p>
+
           <p>
-            My primary expertise is in <b>React.js</b> and <b>Next.js</b>,
-            crafting reusable components, smooth interactions, and
-            optimized architectures — extended into mobile with{' '}
-            <b>Flutter</b>.
+            I specialize in <b>React.js</b>, <b>Next.js</b>, and{' '}
+            <b>Flutter</b>, building reusable component systems, seamless user
+            experiences, and scalable applications with clean, maintainable
+            code. Every interface I create is designed with performance,
+            accessibility, and long-term growth in mind.
           </p>
+
           <p>
-            Alongside academics, I actively work on real-world projects to
-            improve problem-solving skills and <b>full-stack understanding</b>.
-            I am always keen to learn, innovate, and tackle challenging
-            opportunities.
+            Beyond writing code, I love solving real-world problems through
+            technology. Every project strengthens my engineering mindset,
+            expands my <b>full-stack development</b> knowledge, and pushes me
+            to create products that combine thoughtful design with exceptional
+            user experiences.
           </p>
 
           <a
@@ -83,8 +136,9 @@ const About = () => {
 
       <div className={styles.timelineSection}>
         <Reveal>
-          <h2 className={styles.sectionTitle}>My journey</h2>
+          <h2 className={styles.sectionTitle}>Journey So Far</h2>
         </Reveal>
+
         <div className="timeline-wrap">
           {timeline.map((item, i) => (
             <Reveal key={item.title} delay={i * 0.05}>
@@ -93,6 +147,7 @@ const About = () => {
                   <div className="timeline-dot" />
                   <div className="timeline-line" />
                 </div>
+
                 <div className="timeline-content">
                   <div className="year">{item.year}</div>
                   <h3>{item.title}</h3>
@@ -106,17 +161,19 @@ const About = () => {
 
       <div className={styles.skillsSection}>
         <Reveal>
-          <h2 className={styles.sectionTitle}>Skills</h2>
+          <h2 className={styles.sectionTitle}>Technologies I Work With</h2>
         </Reveal>
+
         <div className="skills-grid">
           {skillCategories.map((cat, i) => (
             <Reveal key={cat.title} delay={i * 0.08}>
               <div className="skill-cat-card">
                 <h3>{cat.title}</h3>
+
                 <div className="skill-chip-list">
-                  {cat.skills.map((s) => (
-                    <span className="skill-chip" key={s}>
-                      {s}
+                  {cat.skills.map((skill) => (
+                    <span className="skill-chip" key={skill}>
+                      {skill}
                     </span>
                   ))}
                 </div>

@@ -55,13 +55,20 @@ const fadeUp = {
 const Home = () => {
   return (
     <main className="home-container">
-      <div className="blob blob-1"></div>
-      <div className="blob blob-2"></div>
-
+      <motion.div
+        className="hero-orb hero-orb-1"
+        animate={{ x: [0, 26, 0], y: [0, -18, 0] }}
+        transition={{ duration: 9, repeat: Infinity, ease: 'easeInOut' }}
+      />
+      <motion.div
+        className="hero-orb hero-orb-2"
+        animate={{ x: [0, -22, 0], y: [0, 20, 0] }}
+        transition={{ duration: 11, repeat: Infinity, ease: 'easeInOut' }}
+      />
       <section className="hero">
         <div className="hero-content">
           <motion.span className="badge" variants={fadeUp} initial="hidden" animate="show" custom={0}>
-            <span className="pulse" /> AVAILABLE FOR FREELANCE & INTERNSHIPS WORK
+            <span className="pulse" /> available_for_freelance_and_internships
           </motion.span>
 
           <motion.h1 variants={fadeUp} initial="hidden" animate="show" custom={1}>

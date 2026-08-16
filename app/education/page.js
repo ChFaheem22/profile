@@ -90,13 +90,15 @@ const Education = () => {
 
       <div className={styles.certGrid}>
         {certifications.map((cert, index) => (
-          <div key={index} className={styles.certCard}>
-            <h3 className={styles.certName}>{cert.title}</h3>
-            <p className={styles.certProvider}>
-              {cert.provider} <span className={styles.certYear}>· {cert.year}</span>
-            </p>
-            <p className={styles.certDesc}>{cert.description}</p>
-          </div>
+          <Reveal key={index} delay={index * 0.07}>
+            <div className={styles.certCard}>
+              <h3 className={styles.certName}>{cert.title}</h3>
+              <p className={styles.certProvider}>
+                {cert.provider} <span className={styles.certYear}>· {cert.year}</span>
+              </p>
+              <p className={styles.certDesc}>{cert.description}</p>
+            </div>
+          </Reveal>
         ))}
       </div>
     </section>
