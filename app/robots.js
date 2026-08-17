@@ -1,5 +1,5 @@
 export default function robots() {
-  const siteUrl = 'https://faheem-portfolio.vercel.app';
+  const siteUrl = 'https://faheemdev.vercel.app/';
   return {
     rules: {
       userAgent: '*',

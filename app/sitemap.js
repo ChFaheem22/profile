@@ -1,7 +1,7 @@
 import { projects } from './projects/data';
 
 export default function sitemap() {
-  const siteUrl = 'https://faheem-portfolio.vercel.app';
+  const siteUrl = 'https://faheemdev.vercel.app/';
 
   const staticPages = [
     '',
