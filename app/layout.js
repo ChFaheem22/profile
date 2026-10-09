@@ -40,7 +40,7 @@ export const metadata = {
   ],
   authors: [{ name: "Faheem" }],
   openGraph: {
-    title: "Faheem — Frontend Engineer",
+    title: "Faheem Frontend Engineer",
     description:
       "Portfolio of Faheem  a frontend developer crafting fast, modern, user-focused web and mobile experiences.",
     url: siteUrl,
@@ -49,7 +49,7 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Faheem - Frontend Engineer",
+    title: "Faheem Frontend Engineer",
     description:
       "Portfolio of Faheem. A frontend developer crafting fast, modern, user-focused web and mobile experiences.",
   },
