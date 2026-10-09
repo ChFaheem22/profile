@@ -45,21 +45,6 @@ export const projects = [
   },
 
   {
-    slug: 'carapp',
-    name: 'CarApp',
-    title: 'CarApp',
-    tagline: 'AI-powered car pricing desktop app',
-    description:
-      'A Python desktop application with AI-powered car pricing and market analysis.',
-    tools: ['Python', 'CustomTkinter', 'Pandas'],
-    image: '/carapp.png',
-    grad: '#2f6b4f',
-    demo: null,
-    github: null,
-    hasCaseStudy: false,
-  },
-
-  {
     slug: 'car-rental-system',
     name: 'Car Rental System',
     title: 'Car Rental System',

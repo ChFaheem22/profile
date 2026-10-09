@@ -24,7 +24,7 @@ const siteUrl = "https://faheemdev.vercel.app/";
 export const metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Faheem — Frontend Engineer",
+    default: "Faheem Frontend Engineer",
     template: "%s | Faheem",
   },
   description:
@@ -42,16 +42,16 @@ export const metadata = {
   openGraph: {
     title: "Faheem — Frontend Engineer",
     description:
-      "Portfolio of Faheem — a frontend developer crafting fast, modern, user-focused web and mobile experiences.",
+      "Portfolio of Faheem  a frontend developer crafting fast, modern, user-focused web and mobile experiences.",
     url: siteUrl,
-    siteName: "Faheem — Portfolio",
+    siteName: "Faheem Portfolio",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
     title: "Faheem - Frontend Engineer",
     description:
-      "Portfolio of Faheem — a frontend developer crafting fast, modern, user-focused web and mobile experiences.",
+      "Portfolio of Faheem. A frontend developer crafting fast, modern, user-focused web and mobile experiences.",
   },
   robots: {
     index: true,

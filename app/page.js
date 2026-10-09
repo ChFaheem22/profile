@@ -24,7 +24,7 @@ const services = [
   {
     icon: '🔗',
     title: 'Full-Stack (MERN)',
-    desc: 'End-to-end features across MongoDB, Express, React and Node — auth, bookings, dashboards.',
+    desc: 'End-to-end features across MongoDB, Express, React and Node  auth, bookings, dashboards.',
   },
   {
     icon: '🎨',
@@ -68,7 +68,7 @@ const Home = () => {
       <section className="hero">
         <div className="hero-content">
           <motion.span className="badge" variants={fadeUp} initial="hidden" animate="show" custom={0}>
-            <span className="pulse" /> available_for_freelance_and_internships
+            <span className="pulse" /> Available for Freelance and Internships
           </motion.span>
 
           <motion.h1 variants={fadeUp} initial="hidden" animate="show" custom={1}>
@@ -80,7 +80,7 @@ const Home = () => {
           </motion.div>
 
           <motion.p className="tagline" variants={fadeUp} initial="hidden" animate="show" custom={3}>
-            Crafting fast, modern and user-focused web &amp; mobile experiences —
+            Crafting fast, modern and user-focused web &amp; mobile experiences 
             from React interfaces to full MERN-stack products.
           </motion.p>
 
@@ -119,12 +119,12 @@ const Home = () => {
               <div className="label">Projects Shipped</div>
             </div>
             <div className="stat">
-              <div className="num">1</div>
+              <div className="num">3</div>
               <div className="label">Internship</div>
             </div>
             <div className="stat">
-              <div className="num">3+</div>
-              <div className="label">Stacks — Web, Mobile, AI</div>
+              <div className="num">4+</div>
+              <div className="label">Stacks  Web, Mobile, AI</div>
             </div>
           </motion.div>
         </div>
@@ -155,7 +155,7 @@ const Home = () => {
 
       <div className="stack-strip">
         <div className="container">
-          <span className="label">core stack —</span>
+          <span className="label">Core stack </span>
           <div className="pills">
             {stack.map((s) => (
               <span className="pill" key={s}>

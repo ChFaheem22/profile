@@ -100,14 +100,14 @@ const About = () => {
             <span className="gradText"> unforgettable</span>.
           </h1>
 
-          <p>
+          <p className='p'>
             I&rsquo;m <b>Faheem</b>, a <b>Frontend Developer</b> and Software
             Engineering student passionate about turning ambitious ideas into
             modern, responsive, and high-performance web applications that
             people genuinely enjoy using.
           </p>
 
-          <p>
+          <p className='p'>
             I specialize in <b>React.js</b>, <b>Next.js</b>, and{' '}
             <b>Flutter</b>, building reusable component systems, seamless user
             experiences, and scalable applications with clean, maintainable
@@ -115,7 +115,7 @@ const About = () => {
             accessibility, and long-term growth in mind.
           </p>
 
-          <p>
+          <p className={styles.p}>
             Beyond writing code, I love solving real-world problems through
             technology. Every project strengthens my engineering mindset,
             expands my <b>full-stack development</b> knowledge, and pushes me

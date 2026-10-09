@@ -34,7 +34,7 @@ const Footer = () => {
     <footer className="footer">
       <div className="container">
         <span className="copy">
-          © {new Date().getFullYear()} Faheem —{' '}
+          © {new Date().getFullYear()} Faheem -{' '}
           <Link href="/contact">Let&apos;s build something amazing.</Link>
         </span>
 

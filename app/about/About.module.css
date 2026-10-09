@@ -3,6 +3,10 @@
   margin: 0 auto;
   padding: calc(var(--nav-h) + 56px) 24px 40px;
 }
+ 
+.p{
+  text-align: justify;
+}
 
 .container {
   display: grid;
@@ -47,9 +51,7 @@
   width: 100%;
   height: auto;
 }
-[data-theme='dark'] .profileImg {
-  filter: grayscale(1) contrast(1.05) brightness(0.96);
-}
+
 
 .downloadBtnDesktop {
   display: block;

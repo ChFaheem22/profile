@@ -50,13 +50,7 @@ const Navbar = () => {
               {link.label}
             </Link>
           ))}
-          <Link
-            href="/contact"
-            className={isActive('/contact')}
-            onClick={() => setIsOpen(false)}
-          >
-            Contact
-          </Link>
+          
         </div>
 
         <div className="right">

@@ -111,7 +111,7 @@ const Contacts = () => {
                   id="name"
                   name="name"
                   required
-                  placeholder="Jane Doe"
+                  placeholder="Faheem Ch"
                 />
               </div>
 
@@ -122,7 +122,7 @@ const Contacts = () => {
                   id="email"
                   name="email"
                   required
-                  placeholder="jane@company.com"
+                  placeholder="faheem@company.com"
                 />
               </div>
             </div>
@@ -153,7 +153,7 @@ const Contacts = () => {
             </button>
 
             <p className="formNote">
-              Sent directly to my inbox — no account or sign-up needed on your
+              Sent directly to my inbox - no account or sign-up needed on your
               end.
             </p>
           </form>
