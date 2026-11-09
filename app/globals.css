@@ -665,6 +665,18 @@ img {
   background: var(--good);
 }
 
+.hero-window-dots span:nth-child(1) {
+  background-color: #ff5f57; /* Red */
+}
+
+.hero-window-dots span:nth-child(2) {
+  background-color: #febc2e; /* Yellow */
+}
+
+.hero-window-dots span:nth-child(3) {
+  background-color: #28c840; /* Green */
+}
+
 /* Floating card fallback removal */
 .floating-card {
   display: none !important;

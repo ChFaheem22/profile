@@ -24,7 +24,7 @@ const siteUrl = "https://faheemdev.vercel.app/";
 export const metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Faheem — Frontend & Mobile Engineer",
+    default: "Faheem - Frontend & Mobile Engineer",
     template: "%s | Faheem",
   },
   description:

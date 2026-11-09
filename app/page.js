@@ -132,7 +132,7 @@ const Home = () => {
                 <span />
                 <span />
               </div>
-              <span className="hero-window-title">faheem_profile.tsx</span>
+              <span className="hero-window-title">Faheem Profile</span>
             </div>
             <div className="image-container">
               <Image
