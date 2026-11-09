@@ -35,7 +35,7 @@ const Footer = () => {
       <div className="container">
         <span className="copy">
           © {new Date().getFullYear()} Faheem -{' '}
-          <Link href="/contact">Let&apos;s build something amazing.</Link>
+          <Link href="/contact">Get in touch</Link>
         </span>
 
         <div className="socials">

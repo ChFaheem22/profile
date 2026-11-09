@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { ExternalLink, FileSearch } from 'lucide-react';
 import { FaGithub } from 'react-icons/fa';
 import { projects } from './data';
@@ -7,18 +8,17 @@ import Reveal from '../components/reveal';
 export const metadata = {
   title: 'Projects',
   description:
-    'Web, mobile and AI-assisted projects — MERN, Next.js, Flutter and Python.',
+    'Web, mobile and full-stack engineering projects — MERN, Next.js, Flutter and Python.',
 };
 
 const Project = () => {
   return (
     <div className="wrap">
       <Reveal>
-        <span className="eyebrow">SELECTED WORK</span>
+        <span className="eyebrow">Selected work</span>
         <h1 className="heading">Projects</h1>
         <p className="sub">
-          A mix of web, mobile and AI-assisted tools - spanning MERN, Next.js,
-          Flutter and Python.
+          Production web applications, cross-platform mobile apps, and developer tooling.
         </p>
       </Reveal>
 
@@ -26,11 +26,66 @@ const Project = () => {
         {projects.map((project, i) => (
           <Reveal key={project.slug} delay={i * 0.05}>
             <div className="card">
-              <div
-                className="cover"
-                style={{ background: project.grad }}
-              >
-                <span className="coverName">{project.name}</span>
+              <div className="cover">
+                {project.slug === 'drivego' ? (
+                  <div style={{ position: 'relative', width: '100%', height: '100%' }}>
+                    <Image
+                      src="/drivego.png"
+                      alt="DriveGo Flutter App"
+                      fill
+                      style={{ objectFit: 'cover', opacity: 0.85 }}
+                    />
+                    <div style={{
+                      position: 'absolute',
+                      inset: 0,
+                      background: 'linear-gradient(to top, rgba(14, 16, 22, 0.9) 0%, rgba(14, 16, 22, 0.2) 100%)',
+                    }} />
+                    <span className="coverName" style={{ position: 'absolute', bottom: '16px', left: '20px' }}>
+                      {project.name}
+                    </span>
+                  </div>
+                ) : (
+                  <div style={{
+                    width: '100%',
+                    height: '100%',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    justifyContent: 'space-between',
+                    padding: '16px 20px',
+                    background: 'var(--surface-raised)',
+                    backgroundImage: 'radial-gradient(var(--border-strong) 1px, transparent 1px)',
+                    backgroundSize: '16px 16px',
+                  }}>
+                    <div style={{
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'space-between',
+                      fontFamily: 'var(--font-mono)',
+                      fontSize: '11px',
+                      color: 'var(--text-faint)',
+                    }}>
+                      <div style={{ display: 'flex', gap: '5px' }}>
+                        <span style={{ width: '7px', height: '7px', borderRadius: '50%', background: 'var(--border-strong)' }} />
+                        <span style={{ width: '7px', height: '7px', borderRadius: '50%', background: 'var(--border-strong)' }} />
+                        <span style={{ width: '7px', height: '7px', borderRadius: '50%', background: 'var(--border-strong)' }} />
+                      </div>
+                      <span>{project.slug}.dev</span>
+                    </div>
+
+                    <div style={{ textAlign: 'left' }}>
+                      <span className="coverName" style={{ display: 'block', marginBottom: '2px' }}>
+                        {project.name}
+                      </span>
+                      <span style={{
+                        fontFamily: 'var(--font-mono)',
+                        fontSize: '11px',
+                        color: 'var(--accent)',
+                      }}>
+                        {project.tools.slice(0, 3).join(' · ')}
+                      </span>
+                    </div>
+                  </div>
+                )}
 
                 <div className="coverOverlay">
                   {project.demo && (
@@ -41,7 +96,7 @@ const Project = () => {
                       className="coverBtn"
                       aria-label="Live demo"
                     >
-                      <ExternalLink size={17} />
+                      <ExternalLink size={16} />
                     </a>
                   )}
 
@@ -53,7 +108,7 @@ const Project = () => {
                       className="coverBtn"
                       aria-label="GitHub repository"
                     >
-                      <FaGithub size={17} />
+                      <FaGithub size={16} />
                     </a>
                   )}
 
@@ -63,7 +118,7 @@ const Project = () => {
                       className="coverBtn"
                       aria-label="Read case study"
                     >
-                      <FileSearch size={17} />
+                      <FileSearch size={16} />
                     </Link>
                   )}
                 </div>
@@ -89,7 +144,7 @@ const Project = () => {
                       rel="noopener noreferrer"
                       className="link"
                     >
-                      <ExternalLink size={14} />
+                      <ExternalLink size={13} />
                       {' '}Live Demo
                     </a>
                   )}
@@ -101,7 +156,7 @@ const Project = () => {
                       rel="noopener noreferrer"
                       className="link"
                     >
-                      <FaGithub size={14} />
+                      <FaGithub size={13} />
                       {' '}GitHub
                     </a>
                   )}
@@ -111,13 +166,13 @@ const Project = () => {
                       href={`/projects/${project.slug}`}
                       className="link"
                     >
-                      <FileSearch size={14} />
+                      <FileSearch size={13} />
                       {' '}Case Study
                     </Link>
                   ) : (
                     <span className="link disabled">
-                      <FileSearch size={14} />
-                      {' '}Case study coming soon
+                      <FileSearch size={13} />
+                      {' '}Case study pending
                     </span>
                   )}
                 </div>

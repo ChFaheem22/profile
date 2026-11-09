@@ -10,8 +10,9 @@ export function generateStaticParams() {
     .map((p) => ({ slug: p.slug }));
 }
 
-export function generateMetadata({ params }) {
-  const study = caseStudies[params.slug];
+export async function generateMetadata({ params }) {
+  const resolved = await params;
+  const study = caseStudies[resolved?.slug];
 
   if (!study) return {};
 
@@ -21,8 +22,9 @@ export function generateMetadata({ params }) {
   };
 }
 
-const CaseStudyPage = ({ params }) => {
-  const study = caseStudies[params.slug];
+const CaseStudyPage = async ({ params }) => {
+  const resolved = await params;
+  const study = caseStudies[resolved?.slug];
 
   if (!study) return notFound();
 
@@ -30,10 +32,10 @@ const CaseStudyPage = ({ params }) => {
     <div className="wrap">
       <div className="caseHero">
         <Link href="/projects" className="back">
-          <ArrowLeft size={15} /> Back to projects
+          <ArrowLeft size={14} /> Back to projects
         </Link>
 
-        <span className="eyebrow">CASE STUDY</span>
+        <span className="eyebrow">Case study</span>
 
         <h1 className="heading">{study.title}</h1>
 
@@ -87,7 +89,7 @@ const CaseStudyPage = ({ params }) => {
               rel="noopener noreferrer"
               className="btn primary"
             >
-              <ExternalLink size={16} />
+              <ExternalLink size={15} />
               {' '}Live Demo
             </a>
           )}
@@ -99,8 +101,8 @@ const CaseStudyPage = ({ params }) => {
               rel="noopener noreferrer"
               className="btn outline"
             >
-              <FaGithub size={16} />
-              {' '}GitHub
+              <FaGithub size={15} />
+              {' '}View Source
             </a>
           )}
         </div>

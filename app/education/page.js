@@ -12,7 +12,7 @@ const educationData = [
     institution: 'Punjab College',
     year: '2021 - 2023',
     description:
-      'Built a strong foundation in computer science, mathematics, and analytical thinking. Graduated with distinction.',
+      'Studied computer science, maths and physics. Graduated with distinction.',
     coursework: ['Computer Science', 'Mathematics', 'Physics'],
   },
   {
@@ -20,7 +20,7 @@ const educationData = [
     institution: 'Riphah International University',
     year: '2023 - Present',
     description:
-      'Focused on data structures, system design, and modern web development. Alongside academic coursework, I actively build real-world frontend applications with an emphasis on performance, scalability, and user experience.',
+      'Coursework covers data structures, system design and web development. Outside class I build frontend and full-stack projects, such as QuickServe and DriveGo.',
     coursework: [
       'Data Structures & Algorithms',
       'Software Requirements Engineering',
@@ -36,28 +36,28 @@ const certifications = [
     provider: 'Cisco Networking Academy',
     year: '2026',
     description:
-      'Gained a solid understanding of operating system concepts, including process management, memory management, file systems, and security, enabling effective system administration and troubleshooting.',
+      'Covers process management, memory, file systems and security basics.',
   },
   {
     title: 'Software Engineering: Modeling Software Systems using UML',
     provider: 'The Hong Kong University of Science and Technology',
     year: '2025',
     description:
-      'Developed expertise in representing software system architecture and workflows using UML diagrams, improving clarity and maintainability of designs.',
+      'Learned to model system architecture and workflows with UML diagrams.',
   },
   {
     title: 'JavaScript Essentials 2 Certification',
     provider: 'Cisco Networking Academy',
     year: '2025',
     description:
-      'Developed strong skills in modern JavaScript, including functions, arrays, objects, and asynchronous programming, for dynamic and responsive web development.',
+      'Covers functions, arrays, objects and async JavaScript.',
   },
 ];
 
 const Education = () => {
   return (
     <section className={styles.educationSection}>
-      <span className="eyebrow">ACADEMIC RECORD</span>
+      <span className="eyebrow">Academic record</span>
       <h1 className={styles.title}>Education</h1>
 
       <div className={styles.cardGrid}>

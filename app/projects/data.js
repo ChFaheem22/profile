@@ -5,7 +5,7 @@ export const projects = [
     title: 'QuickServe',
     tagline: 'MERN service-booking platform',
     description:
-      'A full-stack web application connecting users with local service providers. Includes authentication, service listings, real-time booking, role-based dashboards, payment method support, and a ratings & reviews system.',
+      'Connects customers with local service providers. Customers book and review, and providers manage bookings from their own dashboard.',
     tools: ['MongoDB', 'Express.js', 'React.js', 'Node.js'],
     image: '/quickserve.png',
     grad: '#2b3dff',
@@ -20,7 +20,7 @@ export const projects = [
     title: 'DriveGo',
     tagline: 'Flutter car rental app',
     description:
-      'A full-featured mobile car rental ecosystem built with Flutter. Offers real-time vehicle availability, seamless booking flows, and secure identity verification.',
+      'Car rental app in Flutter. Shows live availability, takes a user from search to booking, and verifies identity in the app.',
     tools: ['Flutter', 'Dart', 'Firebase Auth', 'Cloudinary'],
     image: '/drivego.png',
     grad: '#121212',
@@ -35,7 +35,7 @@ export const projects = [
     title: 'AutoSmart AI',
     tagline: 'AI car recommendation & pricing',
     description:
-      'A CustomTkinter desktop app that recommends cars and predicts fair market price using a machine learning model.',
+      'Desktop app that recommends cars and estimates their market price with a machine learning model.',
     tools: ['Python', 'CustomTkinter', 'Machine Learning'],
     image: '/autosmart-ai.png',
     grad: '#b5502a',
@@ -50,7 +50,7 @@ export const projects = [
     title: 'Car Rental System',
     tagline: 'Database-driven rental management',
     description:
-      'Complete vehicle rental management system using MySQL and MongoDB.',
+      'Rental management for vehicles, built on MySQL and MongoDB.',
     tools: ['MySQL', 'MongoDB'],
     image: '/car-rental-system.png',
     grad: '#5b3a8f',
@@ -65,7 +65,7 @@ export const projects = [
     title: 'Blog App',
     tagline: 'Next.js blog application',
     description:
-      'Modern blog application focused on clean UI and optimized performance.',
+      'A blog built with Next.js and React.',
     tools: ['HTML', 'CSS', 'React.js', 'Next.js'],
     image: '/blog-app.png',
     grad: '#43506b',
@@ -97,7 +97,7 @@ export const caseStudies = {
     challenges:
       'The trickiest part was extending an already-working booking flow with payments and reviews without breaking existing behavior — that meant carefully mapping out how a booking\'s state (pending → confirmed → completed → reviewed) should flow through both the API and the UI, and keeping the customer and provider dashboards in sync with the same underlying data.',
     testing:
-      'To validate the backend thoroughly, I wrote a white-box testing document covering 70 test cases across 6 different testing techniques as part of an academic deliverable — a good discipline for catching edge cases that manual clicking through the app tends to miss.',
+      'To validate the backend thoroughly, I wrote a white-box testing document covering 70 test cases across 6 different testing techniques as part of an academic deliverable. Writing the cases down caught edge cases that clicking through the app would have missed.',
     lessons:
       'Building the ratings/reviews and payment features on top of an existing schema (rather than designing everything upfront) was a good lesson in how much easier extensions are when the data model anticipates future fields, even loosely.',
   },

@@ -4,18 +4,18 @@ import Reveal from '../components/reveal';
 
 export const metadata = {
   title: 'Contact',
-  description: "Get in touch — I'm open to freelance work and internship opportunities.",
+  description: "Freelance work or an internship? Send a message.",
 };
 
 const Contacts = () => {
   return (
     <section className="contactSection">
       <Reveal className="contactHead">
-        <span className="eyebrow">GET IN TOUCH</span>
+        <span className="eyebrow">Get in touch</span>
         <h1 className="contactTitle">Have a project in mind?</h1>
         <p>
-          I&rsquo;m always open to discussing new opportunities, freelance work,
-          or ideas. Send a message and I&rsquo;ll get back to you.
+          Freelance work, an internship, or a project you want a second
+          opinion on. Send it over.
         </p>
       </Reveal>
 
@@ -24,7 +24,7 @@ const Contacts = () => {
           <div className="infoPanel">
             <div className="infoItem">
               <div className="infoIcon">
-                <MapPin size={17} />
+                <MapPin size={16} />
               </div>
               <div className="infoText">
                 <div className="k">Location</div>
@@ -34,7 +34,7 @@ const Contacts = () => {
 
             <a href="mailto:faheemchh779@gmail.com" className="infoItem">
               <div className="infoIcon">
-                <Mail size={17} />
+                <Mail size={16} />
               </div>
               <div className="infoText">
                 <div className="k">Email</div>
@@ -49,11 +49,11 @@ const Contacts = () => {
               className="infoItem"
             >
               <div className="infoIcon">
-                <FaLinkedin size={17} />
+                <FaLinkedin size={16} />
               </div>
               <div className="infoText">
                 <div className="k">LinkedIn</div>
-                <div className="v">Connect professionally</div>
+                <div className="v">Message me</div>
               </div>
             </a>
 
@@ -64,11 +64,11 @@ const Contacts = () => {
               className="infoItem"
             >
               <div className="infoIcon">
-                <FaGithub size={17} />
+                <FaGithub size={16} />
               </div>
               <div className="infoText">
                 <div className="k">GitHub</div>
-                <div className="v">Explore my repositories</div>
+                <div className="v">Code &amp; projects</div>
               </div>
             </a>
 
@@ -79,7 +79,7 @@ const Contacts = () => {
               className="infoItem"
             >
               <div className="infoIcon">
-                <FileText size={17} />
+                <FileText size={16} />
               </div>
               <div className="infoText">
                 <div className="k">Resume</div>
@@ -143,18 +143,17 @@ const Contacts = () => {
                 id="message"
                 name="message"
                 required
-                placeholder="Tell me about your project..."
+                placeholder="What are you working on?"
               />
             </div>
 
             <button type="submit" className="btn primary submitBtn">
-              <Send size={16} style={{ marginRight: '8px' }} />
+              <Send size={15} style={{ marginRight: '6px' }} />
               Send Message
             </button>
 
             <p className="formNote">
-              Sent directly to my inbox - no account or sign-up needed on your
-              end.
+              Goes straight to my inbox. No sign-up needed.
             </p>
           </form>
         </Reveal>

@@ -5,39 +5,39 @@ import Reveal from '../components/reveal';
 export const metadata = {
   title: 'About',
   description:
-    'Frontend Developer & Software Engineering student passionate about building modern, scalable, and high-performance digital experiences.',
+    'Frontend developer and software engineering student in Lahore, building React, Next.js and Flutter apps.',
 };
 
 const timeline = [
   {
     year: '2023',
-    title: 'Started My Development Journey',
-    desc: 'Discovered web development and built my first responsive websites using HTML, CSS, and JavaScript.',
+    title: 'Started coding',
+    desc: 'Built my first websites with HTML, CSS and JavaScript.',
   },
   {
     year: '2023 – 2024',
-    title: 'Modern Frontend Development',
-    desc: 'Focused on React, component-driven architecture, state management, and creating engaging user interfaces.',
+    title: 'Frontend Development',
+    desc: 'Learned React, components and state management, and started building interfaces.',
   },
   {
     year: '2024',
     title: 'Full-Stack Development',
-    desc: 'Expanded into the MERN stack, building complete web applications with APIs, authentication, and databases.',
+    desc: 'Moved into the MERN stack and built apps with APIs, auth and databases.',
   },
   {
     year: '2024 – 2025',
     title: 'Cross-Platform Apps',
-    desc: 'Started developing mobile applications with Flutter and Firebase while exploring scalable app architecture.',
+    desc: 'Started building mobile apps with Flutter and Firebase.',
   },
   {
     year: '2025',
     title: 'Frontend Developer Internship',
-    desc: 'Contributed to production-ready React applications, collaborated with teams, and transformed designs into polished user experiences.',
+    desc: 'Built React interfaces and reusable components from Figma designs at Humanity Alliance.',
   },
   {
     year: 'Today',
-    title: 'Building & Growing',
-    desc: 'Continuously creating modern digital products while expanding my full-stack expertise and pursuing Software Engineering.',
+    title: 'Final year and open to work',
+    desc: 'Finishing my B.Sc. and looking for frontend internships and freelance projects.',
   },
 ];
 
@@ -89,38 +89,29 @@ const About = () => {
         </div>
 
         <div className={styles.infoBox}>
-          <span className="eyebrow">ABOUT ME</span>
+          <span className="eyebrow">About me</span>
 
           <h1 className={styles.title}>
-            Building
-            <span className="gradText"> digital experiences </span>
-            that are
-            <span className="gradText"> fast</span>,
-            <span className="gradText"> scalable</span>, and
-            <span className="gradText"> unforgettable</span>.
+            I write the part of the app people actually <span style={{ color: 'var(--accent)' }}>click.</span>
           </h1>
 
-          <p className='p'>
-            I&rsquo;m <b>Faheem</b>, a <b>Frontend Developer</b> and Software
-            Engineering student passionate about turning ambitious ideas into
-            modern, responsive, and high-performance web applications that
-            people genuinely enjoy using.
-          </p>
-
-          <p className='p'>
-            I specialize in <b>React.js</b>, <b>Next.js</b>, and{' '}
-            <b>Flutter</b>, building reusable component systems, seamless user
-            experiences, and scalable applications with clean, maintainable
-            code. Every interface I create is designed with performance,
-            accessibility, and long-term growth in mind.
+          <p className={styles.p}>
+            I&apos;m Faheem. I&apos;m a software engineering student at Riphah
+            International University in Lahore, and most of my time goes into
+            frontend work with React, Next.js and Flutter.
           </p>
 
           <p className={styles.p}>
-            Beyond writing code, I love solving real-world problems through
-            technology. Every project strengthens my engineering mindset,
-            expands my <b>full-stack development</b> knowledge, and pushes me
-            to create products that combine thoughtful design with exceptional
-            user experiences.
+            I like building reusable components and keeping code readable
+            enough that someone else can pick it up. On my internship at
+            Humanity Alliance I turned Figma designs into components and worked
+            on load speed.
+          </p>
+
+          <p className={styles.p}>
+            Outside class I build full-stack projects with the MERN stack, like
+            QuickServe, a service-booking platform with auth, bookings and
+            reviews.
           </p>
 
           <a
@@ -136,7 +127,7 @@ const About = () => {
 
       <div className={styles.timelineSection}>
         <Reveal>
-          <h2 className={styles.sectionTitle}>Journey So Far</h2>
+          <h2 className={styles.sectionTitle}>How I got here</h2>
         </Reveal>
 
         <div className="timeline-wrap">
@@ -166,7 +157,7 @@ const About = () => {
 
         <div className="skills-grid">
           {skillCategories.map((cat, i) => (
-            <Reveal key={cat.title} delay={i * 0.08}>
+            <Reveal key={cat.title} delay={i * 0.06}>
               <div className="skill-cat-card">
                 <h3>{cat.title}</h3>
 

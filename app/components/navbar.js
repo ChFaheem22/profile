@@ -56,7 +56,7 @@ const Navbar = () => {
         <div className="right">
           <ThemeToggle />
           <Link href="/contact" className="cta">
-            Let&apos;s talk
+            Contact
           </Link>
           <div className="hamburger" onClick={() => setIsOpen(!isOpen)} aria-label="Toggle menu">
             <div className={`bar ${isOpen ? 'toggle' : ''}`}></div>
